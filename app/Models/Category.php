@@ -43,7 +43,7 @@ class Category extends Model
 
     public function products()
     {
-    	reurn $this->hasMany(Product::class);
+    	return $this->hasMany(Product::class);
     }
 
     // 定一个访问器，获取所有祖先类目并按层级排序
