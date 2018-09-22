@@ -60,13 +60,13 @@ class ProductsController extends Controller
         $products = $builder->paginate(16);
 
         return view('products.index', [
-            'products' => $products,
-            'filters'  => [
+            'products'      => $products,
+            'filters'       => [
                 'search' => $search,
                 'order'  => $order,
             ],
             // 等价于 isset($category) ? $category : null
-            'category' => $category ?? null,
+            'category'      => $category ?? null,
         ]);
     }
 
