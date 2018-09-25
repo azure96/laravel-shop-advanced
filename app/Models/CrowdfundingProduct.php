@@ -29,11 +29,11 @@ class CrowdfundingProduct extends Model
     }
 
     // 定义一个名为 percent 的访问器，返回当前众筹进度
-    public function getPercentAttribtue()
+    public function getPercentAttribute()
     {
     	// 已筹金额除以目标金额
-    	$value = $this->attributes['total_amount'] / $this->atttibutes['target_amount'];
+        $value = $this->attributes['total_amount'] / $this->attributes['target_amount'];
 
-    	return floatval(number_format($value * 100, 2, '.', ''));
+        return floatval(number_format($value * 100, 2, '.', ''));
     }
 }
