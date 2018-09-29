@@ -45,10 +45,10 @@ class FinishCrowdfunding extends Command
         ]);
     }
 
-    protected function crowdfundingFailed(CrowdundingProduct $crowdfunding)
+    protected function crowdfundingFailed(CrowdfundingProduct $crowdfunding)
     {
         // 将众筹状态改为众筹失败
-        $crwodfunding->update([
+        $crowdfunding->update([
             'status' => CrowdfundingProduct::STATUS_FAIL,
         ]);
 
